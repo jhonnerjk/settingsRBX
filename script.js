@@ -12,7 +12,12 @@ const defaultSettings = {
 function loadSettings() {
     const savedSettings = localStorage.getItem('robloxSettings');
     if (savedSettings) {
-        return JSON.parse(savedSettings);
+        try {
+            return JSON.parse(savedSettings);
+        } catch (error) {
+            console.error('Failed to parse saved settings, using defaults:', error);
+            return { ...defaultSettings };
+        }
     }
     return { ...defaultSettings };
 }
