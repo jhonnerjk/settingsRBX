@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Settings Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Roblox Settings Manager</h1>
+            <p class="subtitle">Customize your Roblox experience</p>
+        </header>
+
+        <main>
+            <section class="settings-section">
+                <h2>Graphics Settings</h2>
+                <div class="setting-item">
+                    <label for="graphics-quality">Graphics Quality:</label>
+                    <select id="graphics-quality" class="setting-input">
+                        <option value="1">Low</option>
+                        <option value="5" selected>Medium</option>
+                        <option value="10">High</option>
+                    </select>
+                </div>
+                <div class="setting-item">
+                    <label for="fullscreen">Fullscreen Mode:</label>
+                    <input type="checkbox" id="fullscreen" class="setting-checkbox">
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Audio Settings</h2>
+                <div class="setting-item">
+                    <label for="master-volume">Master Volume:</label>
+                    <input type="range" id="master-volume" class="setting-slider" min="0" max="100" value="80">
+                    <span id="volume-value">80%</span>
+                </div>
+                <div class="setting-item">
+                    <label for="mute-audio">Mute Audio:</label>
+                    <input type="checkbox" id="mute-audio" class="setting-checkbox">
+                </div>
+            </section>
+
+            <section class="settings-section">
+                <h2>Privacy Settings</h2>
+                <div class="setting-item">
+                    <label for="chat-enabled">Enable Chat:</label>
+                    <input type="checkbox" id="chat-enabled" class="setting-checkbox" checked>
+                </div>
+                <div class="setting-item">
+                    <label for="friend-requests">Allow Friend Requests:</label>
+                    <input type="checkbox" id="friend-requests" class="setting-checkbox" checked>
+                </div>
+            </section>
+
+            <div class="actions">
+                <button id="save-btn" class="btn btn-primary">Save Settings</button>
+                <button id="reset-btn" class="btn btn-secondary">Reset to Default</button>
+            </div>
+
+            <div id="status-message" class="status-message"></div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Roblox Settings Manager</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
